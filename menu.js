@@ -12,18 +12,40 @@ function question(questionText, type) {
   }
 }
 
-// call the QUESTION function with the order options
-question("Wanna have beans?(YES/NO)","beans");
-question("Wanna have rice?(YES/NO)","rice");
-question("Wanna have chicken?(YES/NO)","chicken");
-question("Wanna have pork?(YES/NO)","pork");
-question("Wanna have veggies?(YES/NO)","beans");
-question("Wanna have queso?(YES/NO)","queso");
-question("Wanna have lettuce?(YES/NO)","lettuce");
-question("Wanna have corn?(YES/NO)","corn");
-question("Wanna have sour cream?(YES/NO)","sour cream");
-question("Wanna have tomato sauce?(YES/NO)","queso");
-question("Wanna have guacamole?(YES/NO)","guacamole");
+var questions= [
+"Wanna have beans?(YES/NO)",
+"Wanna have rice?(YES/NO)",
+"Wanna have chicken?(YES/NO)",
+"Wanna have pork?(YES/NO)",
+"Wanna have veggies?(YES/NO)",
+"Wanna have queso?(YES/NO)",
+"Wanna have lettuce?(YES/NO)",
+"Wanna have corn?(YES/NO)",
+"Wanna have sour cream?(YES/NO)",
+"Wanna have tomato sauce?(YES/NO)",
+"Wanna have guacamole?(YES/NO)"
+];
+
+var answers= [
+"beans",
+"rice",
+"chicken",
+"pork",
+"veggies",
+"queso",
+"lettuce",
+"corn",
+"sour cream",
+"tomato souce",
+"guacamole"
+];
+
+var i=0;
+
+while (i<questions.length){
+	question(questions[i], answers[i]);
+    i++;
+}
 
 order= order.substring(0,order.lastIndexOf(","));
 
